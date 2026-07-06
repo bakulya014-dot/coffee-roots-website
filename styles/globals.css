@@ -138,6 +138,15 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    /* Anchor targets land below the fixed 4rem navbar instead of under it */
+    scroll-padding-top: 5rem;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
   /* font-sans must be applied on body, not html: next/font defines the
      --font-inter variable on <body>, and CSS variables don't inherit upward. */
   body {
