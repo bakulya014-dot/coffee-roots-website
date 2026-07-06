@@ -1,27 +1,8 @@
 import Link from "next/link";
 import { Mail, MapPin } from "lucide-react";
 
+import { InstagramIcon } from "@/components/ui/instagram-icon";
 import { NAV_LINKS, PORTFOLIO_DISCLAIMER, SITE } from "@/lib/constants";
-
-// lucide-react dropped brand icons in 2025, so Instagram is drawn locally.
-function InstagramIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      aria-hidden="true"
-      className={className}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-    </svg>
-  );
-}
 
 // Server component — purely static content, no browser APIs needed.
 export function Footer() {
@@ -36,7 +17,7 @@ export function Footer() {
           <p className="text-sm text-muted-foreground">{SITE.tagline}</p>
           <p className="flex items-start gap-2 text-sm text-muted-foreground">
             <MapPin aria-hidden="true" className="mt-0.5 h-4 w-4 shrink-0" />
-            {SITE.location}
+            {SITE.address}
           </p>
         </div>
 
