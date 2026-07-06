@@ -1,0 +1,154 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  /* Brand palette (SPEC.md §4) exposed as Tailwind utilities:
+     bg-cream, bg-warm-beige, text-coffee-brown, bg-charcoal, bg-caramel, ... */
+  --color-cream: var(--cream);
+  --color-warm-beige: var(--warm-beige);
+  --color-coffee-brown: var(--coffee-brown);
+  --color-charcoal: var(--charcoal);
+  --color-caramel: var(--caramel);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-manrope);
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  /* Brand constants — identical in light and dark mode (SPEC.md §4:
+     "caramel accent stays consistent across both modes"). Only the
+     semantic tokens below remap per mode. */
+  --cream: oklch(0.976 0.008 84);        /* ~#FAF7F1 — background base */
+  --warm-beige: oklch(0.906 0.021 84);   /* ~#EAE1D2 — secondary surfaces */
+  --coffee-brown: oklch(0.348 0.043 55); /* ~#4A3628 — primary text / accents */
+  --charcoal: oklch(0.245 0.008 60);     /* ~#26221F — dark mode base / headings */
+  --caramel: oklch(0.682 0.093 60);      /* ~#C58B5A — accent: CTAs, hover, active links */
+
+  --background: var(--cream);
+  --foreground: var(--coffee-brown);
+  --card: oklch(0.99 0.006 84);
+  --card-foreground: var(--coffee-brown);
+  --popover: oklch(0.99 0.006 84);
+  --popover-foreground: var(--coffee-brown);
+  --primary: var(--coffee-brown);
+  --primary-foreground: var(--cream);
+  --secondary: var(--warm-beige);
+  --secondary-foreground: var(--coffee-brown);
+  --muted: var(--warm-beige);
+  --muted-foreground: oklch(0.51 0.035 55);
+  --accent: var(--caramel);
+  --accent-foreground: oklch(0.99 0.006 84);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.87 0.024 80);
+  --input: oklch(0.87 0.024 80);
+  --ring: var(--caramel);
+  --chart-1: var(--caramel);
+  --chart-2: var(--coffee-brown);
+  --chart-3: oklch(0.51 0.035 55);
+  --chart-4: var(--warm-beige);
+  --chart-5: var(--charcoal);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.955 0.012 84);
+  --sidebar-foreground: var(--coffee-brown);
+  --sidebar-primary: var(--coffee-brown);
+  --sidebar-primary-foreground: var(--cream);
+  --sidebar-accent: var(--warm-beige);
+  --sidebar-accent-foreground: var(--coffee-brown);
+  --sidebar-border: oklch(0.87 0.024 80);
+  --sidebar-ring: var(--caramel);
+}
+
+.dark {
+  --background: var(--charcoal);
+  --foreground: var(--cream);
+  --card: oklch(0.29 0.012 55);
+  --card-foreground: var(--cream);
+  --popover: oklch(0.29 0.012 55);
+  --popover-foreground: var(--cream);
+  --primary: var(--caramel);
+  --primary-foreground: var(--charcoal);
+  --secondary: oklch(0.32 0.02 55);
+  --secondary-foreground: var(--cream);
+  --muted: oklch(0.32 0.02 55);
+  --muted-foreground: oklch(0.78 0.02 80);
+  --accent: var(--caramel);
+  --accent-foreground: var(--charcoal);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 16%);
+  --ring: var(--caramel);
+  --chart-1: var(--caramel);
+  --chart-2: var(--warm-beige);
+  --chart-3: oklch(0.78 0.02 80);
+  --chart-4: oklch(0.32 0.02 55);
+  --chart-5: var(--cream);
+  --sidebar: oklch(0.27 0.01 55);
+  --sidebar-foreground: var(--cream);
+  --sidebar-primary: var(--caramel);
+  --sidebar-primary-foreground: var(--charcoal);
+  --sidebar-accent: oklch(0.32 0.02 55);
+  --sidebar-accent-foreground: var(--cream);
+  --sidebar-border: oklch(1 0 0 / 12%);
+  --sidebar-ring: var(--caramel);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  /* font-sans must be applied on body, not html: next/font defines the
+     --font-inter variable on <body>, and CSS variables don't inherit upward. */
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
+  }
+}
