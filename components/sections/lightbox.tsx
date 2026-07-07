@@ -5,6 +5,7 @@ import Image from "next/image";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 
+import { useLanguage } from "@/hooks/useLanguage";
 import type { GalleryImage } from "@/lib/gallery-data";
 
 interface LightboxProps {
@@ -18,6 +19,7 @@ interface LightboxProps {
 export function Lightbox({ images, index, onClose, onNavigate }: LightboxProps) {
   const reducedMotion = useReducedMotion();
   const dialogRef = useRef<HTMLDivElement>(null);
+  const { t } = useLanguage();
   const open = index !== null;
 
   const step = useCallback(
@@ -66,6 +68,7 @@ export function Lightbox({ images, index, onClose, onNavigate }: LightboxProps) 
   }, [open]);
 
   const image = index !== null ? images[index] : null;
+  const alt = image ? t(`gallery.images.${image.id}.alt`) : "";
   const duration = reducedMotion ? 0 : 0.25;
 
   return (
@@ -75,7 +78,11 @@ export function Lightbox({ images, index, onClose, onNavigate }: LightboxProps) 
           ref={dialogRef}
           role="dialog"
           aria-modal="true"
-          aria-label={`Image ${index + 1} of ${images.length}: ${image.alt}`}
+          aria-label={t("gallery.dialogLabel", {
+            current: index + 1,
+            total: images.length,
+            alt,
+          })}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -85,7 +92,7 @@ export function Lightbox({ images, index, onClose, onNavigate }: LightboxProps) 
         >
           <button
             type="button"
-            aria-label="Close image"
+            aria-label={t("gallery.close")}
             onClick={onClose}
             className="absolute top-4 right-4 flex h-10 w-10 items-center justify-center rounded-full bg-cream/10 text-cream transition-colors hover:bg-cream/20 focus-visible:ring-2 focus-visible:ring-caramel focus-visible:outline-none"
           >
@@ -94,7 +101,7 @@ export function Lightbox({ images, index, onClose, onNavigate }: LightboxProps) 
 
           <button
             type="button"
-            aria-label="Previous image"
+            aria-label={t("gallery.previous")}
             onClick={(e) => {
               e.stopPropagation();
               step(-1);
@@ -106,7 +113,7 @@ export function Lightbox({ images, index, onClose, onNavigate }: LightboxProps) 
 
           {/* Scale/fade transition per SPEC.md §5; key remounts on navigate */}
           <motion.figure
-            key={image.src}
+            key={image.id}
             initial={{ opacity: 0, scale: reducedMotion ? 1 : 0.92 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration, ease: "easeOut" }}
@@ -115,20 +122,20 @@ export function Lightbox({ images, index, onClose, onNavigate }: LightboxProps) 
           >
             <Image
               src={image.src}
-              alt={image.alt}
+              alt={alt}
               width={image.width}
               height={image.height}
               sizes="90vw"
               className="max-h-[75svh] w-auto rounded-lg object-contain"
             />
             <figcaption className="text-sm text-cream/80">
-              {image.alt} · {index + 1} / {images.length}
+              {alt} · {index + 1} / {images.length}
             </figcaption>
           </motion.figure>
 
           <button
             type="button"
-            aria-label="Next image"
+            aria-label={t("gallery.next")}
             onClick={(e) => {
               e.stopPropagation();
               step(1);

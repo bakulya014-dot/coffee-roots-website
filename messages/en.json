@@ -1,0 +1,157 @@
+{
+  "common": {
+    "skipToContent": "Skip to content",
+    "backToTop": "Back to top",
+    "loading": "Loading",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "mainNav": "Main",
+    "mobileNav": "Mobile",
+    "footerNav": "Footer",
+    "languageSwitcher": "Language",
+    "copyright": "© {year} COFFEE ROOTS portfolio concept."
+  },
+  "nav": {
+    "home": "Home",
+    "menu": "Menu",
+    "about": "About",
+    "gallery": "Gallery",
+    "reservations": "Reservations",
+    "contact": "Contact"
+  },
+  "hero": {
+    "reviews": "reviews",
+    "tagline": "Specialty coffee · Almaty",
+    "title": "Rooted in craft, brewed for the neighbourhood",
+    "subtitle": "Single-origin specialty coffee, natural light, and a quiet corner to work — in the heart of Almaty.",
+    "reserveCta": "Reserve a table",
+    "menuCta": "View the menu"
+  },
+  "home": {
+    "featuredTitle": "Featured drinks",
+    "featuredSubtitle": "A small taste of the board —",
+    "featuredLink": "see the full menu",
+    "storyTitle": "A small room with tall windows",
+    "storyP1": "Coffee Roots started as one machine and four tables on Bogenbai Batyr Street — a bet that Almaty wanted its coffee slower, lighter, and closer to the people who grew it.",
+    "storyP2": "Today the room is bigger but the idea isn't: single-origin beans on rotation, reclaimed wood, morning light, and enough quiet outlets that nobody asks you to leave.",
+    "reviewsTitle": "What guests say",
+    "instagramTitle": "From our Instagram",
+    "instagramSubtitle": "A preview of the feed — tap through for the real thing.",
+    "followCta": "Follow us on Instagram",
+    "findUsTitle": "Find us",
+    "contactNote": "Directions, the map, and the contact form live on the Contact page."
+  },
+  "reviews": {
+    "r1": {
+      "quote": "The calmest place to work on Bogenbai Batyr — fast wifi, outlets at every table, and a flat white that never misses.",
+      "name": "Aizhan"
+    },
+    "r2": {
+      "quote": "Finally, specialty coffee without the attitude. The raf here is the best in the city, and there's always a free seat by the window.",
+      "name": "Dmitry"
+    },
+    "r3": {
+      "quote": "Found it on my second day in Almaty and came back every morning after. The croissants deserve their own review.",
+      "name": "Emma"
+    }
+  },
+  "about": {
+    "title": "A small room with tall windows",
+    "story1": "Coffee Roots opened on Bogenbai Batyr Street with one machine, four tables, and a conviction that Almaty didn't need another place to grab coffee — it needed a place to stay with it. The first winter, regulars outnumbered chairs. We took the hint and knocked through to the room next door.",
+    "story2": "What hasn't changed: beans roasted light enough to taste where they grew, milk steamed to order rather than by habit, and a room that runs on morning light for most of the day.",
+    "missionLabel": "Our mission",
+    "missionText": "Make specialty coffee feel ordinary — something you have every day, in a room that treats your time as well as your cup.",
+    "valuesTitle": "What we stand by",
+    "values": {
+      "v1": {
+        "title": "Craft without ceremony",
+        "body": "Precision in the cup, none of the gatekeeping. If you want to know why your filter tastes like apricot, we'll tell you — if you just want good coffee, that's the whole point."
+      },
+      "v2": {
+        "title": "Room to stay",
+        "body": "Nobody hovers over your table. Long mornings, slow laptops, second refills — the room is designed for people who settle in, not pass through."
+      },
+      "v3": {
+        "title": "Direct to the grower",
+        "body": "We pay producers directly and publish what's in the hopper. Better prices at origin make better coffee here — it's not charity, it's how quality works."
+      }
+    },
+    "sourcingTitle": "How we source",
+    "sourcing1": "Two single origins rotate through the hopper every season — one washed, one natural — bought through direct-trade relationships rather than the commodity market. When a lot runs out, it's gone; we'd rather change the card on the grinder than stretch a coffee past its best.",
+    "sourcing2": "Espresso stays consistent; filter is where we experiment. If something unusual lands — a honey-processed lot, an experimental fermentation — it shows up on the V60 bar first.",
+    "roomTitle": "The room",
+    "room1": "Natural light over fixtures, reclaimed wood over laminate, and acoustics tuned so a full room still sounds like a murmur. The window bench catches sun until mid-afternoon; the back corners stay quiet, with outlets at every seat.",
+    "room2": "It's deliberately a room for remote workers as much as for dates and long conversations — stay as long as the coffee keeps coming."
+  },
+  "menu": {
+    "title": "Menu",
+    "intro": "Everything is made on the bar or in our kitchen each morning. Prices in tenge; the coffee rotation changes with the season.",
+    "filterAll": "All",
+    "filterAria": "Filter menu by category",
+    "showingAll": "Showing {count} menu items",
+    "showingCategory": "Showing {count} {category} items",
+    "categories": {
+      "Coffee": "Coffee",
+      "Tea": "Tea",
+      "Pastries": "Pastries",
+      "Desserts": "Desserts",
+      "Breakfast": "Breakfast",
+      "Lunch": "Lunch"
+    },
+    "items": {
+      "espresso": { "name": "Espresso", "description": "Single-origin shot from this month's rotation." },
+      "latte": { "name": "Latte", "description": "Silky microfoam rosetta on hand-thrown ceramic." },
+      "raf": { "name": "Raf", "description": "Almaty's favourite — vanilla cream, gently steamed." },
+      "coldBrew": { "name": "Cold brew", "description": "Steeped 18 hours, served over clear ice." },
+      "flatWhite": { "name": "Flat white", "description": "Double ristretto under a thin veil of milk." },
+      "filterV60": { "name": "Filter V60", "description": "Hand-poured, bright and tea-like. Ask what's on the bar." },
+      "blackTea": { "name": "Taiga black tea", "description": "Full-bodied loose leaf with wild thyme." },
+      "sencha": { "name": "Sencha", "description": "Steamed green tea, grassy and clean." },
+      "seaBuckthorn": { "name": "Sea buckthorn tea", "description": "House favourite — tart, golden, served hot." },
+      "herbal": { "name": "Herbal infusion", "description": "Chamomile, mint, and lemon balm. Naturally caffeine-free." },
+      "croissant": { "name": "Butter croissant", "description": "Laminated over three days, baked every morning." },
+      "almondCroissant": { "name": "Almond croissant", "description": "Twice-baked with frangipane and toasted flakes." },
+      "cardamomBun": { "name": "Cardamom bun", "description": "Scandinavian-style knot, warm spice, light glaze." },
+      "bananaBread": { "name": "Banana bread", "description": "Dense, dark, and toasted to order with butter." },
+      "tiramisu": { "name": "Tiramisu", "description": "Classic recipe with our own espresso soak." },
+      "basqueCheesecake": { "name": "Basque cheesecake", "description": "Burnt top, molten centre, no crust." },
+      "medovik": { "name": "Medovik", "description": "Honey layer cake, the way grandmothers make it." },
+      "chocolateTart": { "name": "Dark chocolate tart", "description": "70% chocolate, sea salt, espresso pastry shell." },
+      "avocadoToast": { "name": "Avocado toast", "description": "Sourdough, poached egg, chili oil, pickled onion." },
+      "syrniki": { "name": "Syrniki", "description": "Cottage-cheese pancakes, sour cream, berry compote." },
+      "granola": { "name": "Granola bowl", "description": "House granola, yogurt, seasonal fruit, mountain honey." },
+      "omelette": { "name": "Omelette", "description": "Three eggs, aged cheese, herbs, toasted sourdough." },
+      "pestoSandwich": { "name": "Chicken pesto sandwich", "description": "Grilled ciabatta, basil pesto, roasted peppers." },
+      "grainBowl": { "name": "Grain bowl", "description": "Bulgur, roasted vegetables, tahini, soft egg." },
+      "soup": { "name": "Soup of the day", "description": "Made each morning — ask the bar what's simmering." },
+      "caesar": { "name": "Caesar salad", "description": "Romaine, parmesan, sourdough croutons, soft egg." }
+    }
+  },
+  "gallery": {
+    "title": "Gallery",
+    "intro": "Placeholder artwork for now — the real photo set replaces these tiles without touching the layout. Click any tile to view it large.",
+    "openImage": "Open image: {alt}",
+    "close": "Close image",
+    "previous": "Previous image",
+    "next": "Next image",
+    "dialogLabel": "Image {current} of {total}: {alt}",
+    "images": {
+      "g1": { "alt": "Placeholder artwork — morning light study in cream and caramel" },
+      "g2": { "alt": "Placeholder artwork — beans and warm tones" },
+      "g3": { "alt": "Placeholder artwork — pour-over abstraction" },
+      "g4": { "alt": "Placeholder artwork — pastry case shapes" },
+      "g5": { "alt": "Placeholder artwork — hands and cup composition" },
+      "g6": { "alt": "Placeholder artwork — laptop corner geometry" },
+      "g7": { "alt": "Placeholder artwork — plants by the window" },
+      "g8": { "alt": "Placeholder artwork — wood grain textures" },
+      "g9": { "alt": "Placeholder artwork — espresso still life" }
+    }
+  },
+  "footer": {
+    "tagline": "Specialty coffee · Almaty",
+    "explore": "Explore",
+    "connect": "Connect",
+    "instagram": "Instagram",
+    "hours": "Open daily · 8:00 – 22:00"
+  }
+}

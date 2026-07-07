@@ -3,19 +3,21 @@
 import { ArrowUp } from "lucide-react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 
+import { useLanguage } from "@/hooks/useLanguage";
 import { SCROLL } from "@/lib/constants";
 import { useScrollPast } from "@/hooks/use-scroll-past";
 
 export function BackToTopButton() {
   const visible = useScrollPast(SCROLL.backToTopThreshold);
   const reducedMotion = useReducedMotion();
+  const { t } = useLanguage();
 
   return (
     <AnimatePresence>
       {visible && (
         <motion.button
           type="button"
-          aria-label="Back to top"
+          aria-label={t("common.backToTop")}
           data-back-to-top
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}

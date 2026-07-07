@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 
 import { MenuBrowser } from "@/components/sections/menu-browser";
-import { Reveal } from "@/components/ui/reveal";
+import { PageIntro } from "@/components/ui/page-intro";
 
+// Metadata stays English for now — localized metadata arrives with
+// locale-aware routing (SEO section of the i18n plan).
 export const metadata: Metadata = {
   title: "Menu",
   description:
@@ -12,13 +14,7 @@ export const metadata: Metadata = {
 export default function MenuPage() {
   return (
     <main className="mx-auto max-w-6xl px-4 pt-28 pb-20 sm:px-6">
-      <Reveal immediate>
-        <h1 className="text-4xl font-bold tracking-tight">Menu</h1>
-        <p className="mt-3 max-w-xl text-muted-foreground">
-          Everything is made on the bar or in our kitchen each morning. Prices
-          in tenge; the coffee rotation changes with the season.
-        </p>
-      </Reveal>
+      <PageIntro titleKey="menu.title" introKey="menu.intro" />
       <div className="mt-10">
         <MenuBrowser />
       </div>

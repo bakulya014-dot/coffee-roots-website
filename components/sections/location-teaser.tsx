@@ -1,14 +1,21 @@
+"use client";
+
 import { Clock, MapPin } from "lucide-react";
 
 import { Reveal } from "@/components/ui/reveal";
+import { useLanguage } from "@/hooks/useLanguage";
 import { SITE } from "@/lib/constants";
 
 export function LocationTeaser() {
+  const { t } = useLanguage();
+
   return (
     <section id="contact" className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
       <div className="grid items-center gap-10 md:grid-cols-2">
         <Reveal>
-          <h2 className="text-3xl font-bold tracking-tight">Find us</h2>
+          <h2 className="text-3xl font-bold tracking-tight">
+            {t("home.findUsTitle")}
+          </h2>
           <address className="mt-4 space-y-2 text-muted-foreground not-italic">
             <p className="flex items-start gap-2">
               <MapPin
@@ -23,12 +30,11 @@ export function LocationTeaser() {
             </p>
             <p className="flex items-center gap-2">
               <Clock aria-hidden="true" className="h-4 w-4 shrink-0 text-caramel" />
-              {SITE.hours}
+              {t("footer.hours")}
             </p>
           </address>
           <p className="mt-4 text-sm text-muted-foreground">
-            Directions, the map, and the contact form live on the Contact page
-            — coming in a later phase.
+            {t("home.contactNote")}
           </p>
         </Reveal>
         <Reveal delay={0.15}>

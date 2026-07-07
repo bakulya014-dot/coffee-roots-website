@@ -26,19 +26,20 @@ export const PORTFOLIO_DISCLAIMER =
   "This website is an independent portfolio redesign concept created for demonstration purposes. It is not the official website of COFFEE ROOTS.";
 
 export interface NavLink {
-  label: string;
+  /** Translation key under nav.* in /messages */
+  labelKey: string;
   href: string;
 }
 
 // Real routes as pages ship; Reservations/Contact stay home-anchor
 // placeholders until their pages exist (SPEC.md §11 step 6).
 export const NAV_LINKS: readonly NavLink[] = [
-  { label: "Home", href: "/" },
-  { label: "Menu", href: "/menu" },
-  { label: "About", href: "/about" },
-  { label: "Gallery", href: "/gallery" },
-  { label: "Reservations", href: "/#reservations" },
-  { label: "Contact", href: "/#contact" },
+  { labelKey: "nav.home", href: "/" },
+  { labelKey: "nav.menu", href: "/menu" },
+  { labelKey: "nav.about", href: "/about" },
+  { labelKey: "nav.gallery", href: "/gallery" },
+  { labelKey: "nav.reservations", href: "/#reservations" },
+  { labelKey: "nav.contact", href: "/#contact" },
 ] as const;
 
 export const SCROLL = {

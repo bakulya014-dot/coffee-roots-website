@@ -1,11 +1,16 @@
+"use client";
+
 import Link from "next/link";
 import { Star } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/ui/reveal";
-import { RATING, SITE } from "@/lib/constants";
+import { useLanguage } from "@/hooks/useLanguage";
+import { RATING } from "@/lib/constants";
 
 export function Hero() {
+  const { t } = useLanguage();
+
   return (
     <section
       id="home"
@@ -24,22 +29,22 @@ export function Hero() {
       <Reveal immediate>
         <p className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-border bg-cream/60 px-3 py-1 text-sm text-muted-foreground backdrop-blur-sm dark:bg-charcoal/60">
           <Star aria-hidden="true" className="h-3.5 w-3.5 fill-caramel text-caramel" />
-          {RATING.score} · {RATING.count} reviews · {SITE.tagline}
+          {RATING.score} · {RATING.count} {t("hero.reviews")} ·{" "}
+          {t("hero.tagline")}
         </p>
         <h1 className="mx-auto max-w-3xl text-4xl font-bold tracking-tight text-balance sm:text-6xl">
-          Rooted in craft, brewed for the neighbourhood
+          {t("hero.title")}
         </h1>
         <p className="mx-auto mt-5 max-w-xl text-lg text-muted-foreground">
-          Single-origin specialty coffee, natural light, and a quiet corner to
-          work — in the heart of Almaty.
+          {t("hero.subtitle")}
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <Button size="lg" asChild>
             {/* Resolves once the Reservations page exists (SPEC.md §11 step 6) */}
-            <Link href="/#reservations">Reserve a table</Link>
+            <Link href="/#reservations">{t("hero.reserveCta")}</Link>
           </Button>
           <Button size="lg" variant="outline" asChild>
-            <Link href="/menu">View the menu</Link>
+            <Link href="/menu">{t("hero.menuCta")}</Link>
           </Button>
         </div>
       </Reveal>

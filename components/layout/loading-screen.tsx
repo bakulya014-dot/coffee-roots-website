@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 
+import { useLanguage } from "@/hooks/useLanguage";
 import { SITE } from "@/lib/constants";
 
 /**
@@ -18,6 +19,7 @@ const DISPLAY_MS = 900;
 export function LoadingScreen() {
   const [done, setDone] = useState(false);
   const reducedMotion = useReducedMotion();
+  const { t } = useLanguage();
 
   useEffect(() => {
     // Under reduced motion, dismiss immediately: a decorative hold with a
@@ -32,7 +34,7 @@ export function LoadingScreen() {
         <motion.div
           data-loading-screen
           role="status"
-          aria-label="Loading"
+          aria-label={t("common.loading")}
           exit={{ opacity: 0 }}
           transition={{ duration: reducedMotion ? 0 : 0.5, ease: "easeOut" }}
           className="fixed inset-0 z-[70] flex items-center justify-center bg-cream dark:bg-charcoal"

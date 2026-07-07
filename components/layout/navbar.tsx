@@ -4,6 +4,8 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 
+import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
+import { useLanguage } from "@/hooks/useLanguage";
 import { NAV_LINKS, SCROLL, SITE } from "@/lib/constants";
 import { useScrollPast } from "@/hooks/use-scroll-past";
 import { cn } from "@/lib/utils";
@@ -16,6 +18,7 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
   const reducedMotion = useReducedMotion();
   const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const { t } = useLanguage();
 
   const close = useCallback(() => setOpen(false), []);
 
@@ -45,8 +48,8 @@ export function Navbar() {
       )}
     >
       <nav
-        aria-label="Main"
-        className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6"
+        aria-label={t("common.mainNav")}
+        className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6"
       >
         <Link
           href="/"
@@ -63,43 +66,47 @@ export function Navbar() {
                 href={link.href}
                 className="text-sm font-medium transition-colors hover:text-caramel"
               >
-                {link.label}
+                {t(link.labelKey)}
               </Link>
             </li>
           ))}
         </ul>
 
-        {/* Mobile hamburger — three lines morph into an X */}
-        <button
-          ref={menuButtonRef}
-          type="button"
-          onClick={() => setOpen((v) => !v)}
-          aria-expanded={open}
-          aria-controls="mobile-nav"
-          aria-label={open ? "Close menu" : "Open menu"}
-          className="relative flex h-10 w-10 items-center justify-center rounded-md transition-colors hover:text-caramel md:hidden"
-        >
-          <span className="relative block h-4 w-6">
-            <motion.span
-              className={LINE_CLASS}
-              style={{ top: 0 }}
-              animate={open ? { y: 7, rotate: 45 } : { y: 0, rotate: 0 }}
-              transition={{ duration: reducedMotion ? 0 : 0.25 }}
-            />
-            <motion.span
-              className={LINE_CLASS}
-              style={{ top: 7 }}
-              animate={open ? { opacity: 0 } : { opacity: 1 }}
-              transition={{ duration: reducedMotion ? 0 : 0.15 }}
-            />
-            <motion.span
-              className={LINE_CLASS}
-              style={{ top: 14 }}
-              animate={open ? { y: -7, rotate: -45 } : { y: 0, rotate: 0 }}
-              transition={{ duration: reducedMotion ? 0 : 0.25 }}
-            />
-          </span>
-        </button>
+        <div className="flex items-center gap-2">
+          <LanguageSwitcher className="hidden md:flex" />
+
+          {/* Mobile hamburger — three lines morph into an X */}
+          <button
+            ref={menuButtonRef}
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            aria-expanded={open}
+            aria-controls="mobile-nav"
+            aria-label={open ? t("common.closeMenu") : t("common.openMenu")}
+            className="relative flex h-10 w-10 items-center justify-center rounded-md transition-colors hover:text-caramel md:hidden"
+          >
+            <span className="relative block h-4 w-6">
+              <motion.span
+                className={LINE_CLASS}
+                style={{ top: 0 }}
+                animate={open ? { y: 7, rotate: 45 } : { y: 0, rotate: 0 }}
+                transition={{ duration: reducedMotion ? 0 : 0.25 }}
+              />
+              <motion.span
+                className={LINE_CLASS}
+                style={{ top: 7 }}
+                animate={open ? { opacity: 0 } : { opacity: 1 }}
+                transition={{ duration: reducedMotion ? 0 : 0.15 }}
+              />
+              <motion.span
+                className={LINE_CLASS}
+                style={{ top: 14 }}
+                animate={open ? { y: -7, rotate: -45 } : { y: 0, rotate: 0 }}
+                transition={{ duration: reducedMotion ? 0 : 0.25 }}
+              />
+            </span>
+          </button>
+        </div>
       </nav>
 
       {/* Mobile menu panel */}
@@ -107,7 +114,7 @@ export function Navbar() {
         {open && (
           <motion.nav
             id="mobile-nav"
-            aria-label="Mobile"
+            aria-label={t("common.mobileNav")}
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
@@ -122,10 +129,13 @@ export function Navbar() {
                     onClick={close}
                     className="block rounded-md px-3 py-2 text-base font-medium transition-colors hover:bg-warm-beige hover:text-coffee-brown dark:hover:bg-secondary dark:hover:text-cream"
                   >
-                    {link.label}
+                    {t(link.labelKey)}
                   </Link>
                 </li>
               ))}
+              <li className="mt-2 border-t border-border pt-3 pb-1">
+                <LanguageSwitcher className="w-fit" />
+              </li>
             </ul>
           </motion.nav>
         )}
