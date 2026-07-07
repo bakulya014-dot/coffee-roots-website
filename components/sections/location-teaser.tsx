@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Clock, MapPin } from "lucide-react";
 
 import { Reveal } from "@/components/ui/reveal";
@@ -34,7 +35,12 @@ export function LocationTeaser() {
             </p>
           </address>
           <p className="mt-4 text-sm text-muted-foreground">
-            {t("home.contactNote")}
+            <Link
+              href="/contact"
+              className="font-medium text-caramel underline-offset-4 hover:underline"
+            >
+              {t("home.contactNote")}
+            </Link>
           </p>
         </Reveal>
         <Reveal delay={0.15}>

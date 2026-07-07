@@ -40,8 +40,7 @@ export function Hero() {
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <Button size="lg" asChild>
-            {/* Resolves once the Reservations page exists (SPEC.md §11 step 6) */}
-            <Link href="/#reservations">{t("hero.reserveCta")}</Link>
+            <Link href="/reservations">{t("hero.reserveCta")}</Link>
           </Button>
           <Button size="lg" variant="outline" asChild>
             <Link href="/menu">{t("hero.menuCta")}</Link>
