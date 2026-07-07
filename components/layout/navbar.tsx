@@ -49,7 +49,7 @@ export function Navbar() {
         className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6"
       >
         <Link
-          href="#home"
+          href="/"
           className="font-heading text-lg font-bold tracking-tight transition-colors hover:text-caramel"
         >
           {SITE.name}

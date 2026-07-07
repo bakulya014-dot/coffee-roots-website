@@ -35,11 +35,11 @@ export function Hero() {
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <Button size="lg" asChild>
-            {/* #reservations resolves once the Reservations page exists (Phase 5) */}
-            <Link href="#reservations">Reserve a table</Link>
+            {/* Resolves once the Reservations page exists (SPEC.md §11 step 6) */}
+            <Link href="/#reservations">Reserve a table</Link>
           </Button>
           <Button size="lg" variant="outline" asChild>
-            <Link href="#menu">View the menu</Link>
+            <Link href="/menu">View the menu</Link>
           </Button>
         </div>
       </Reveal>

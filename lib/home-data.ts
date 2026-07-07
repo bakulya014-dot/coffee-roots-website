@@ -1,39 +1,9 @@
 import type { LucideIcon } from "lucide-react";
 import { Coffee, Croissant, Laptop, Leaf, CakeSlice, Sprout } from "lucide-react";
 
-// All content below is concept copy for the portfolio demo. Prices sit inside
-// the real business's published 1,000–4,000 ₸ range (SPEC.md §1); reviews are
+// All content below is concept copy for the portfolio demo. Reviews are
 // fictional per SPEC.md §7 — nothing is quoted from real customers.
-
-export interface FeaturedDrink {
-  name: string;
-  description: string;
-  /** Pre-formatted to avoid locale-dependent hydration mismatches. */
-  price: string;
-}
-
-export const FEATURED_DRINKS: readonly FeaturedDrink[] = [
-  {
-    name: "Espresso",
-    description: "Single-origin shot from this month's rotation.",
-    price: "1 200 ₸",
-  },
-  {
-    name: "Latte",
-    description: "Silky microfoam rosetta on hand-thrown ceramic.",
-    price: "1 800 ₸",
-  },
-  {
-    name: "Raf",
-    description: "Almaty's favourite — vanilla cream, gently steamed.",
-    price: "2 000 ₸",
-  },
-  {
-    name: "Cold brew",
-    description: "Steeped 18 hours, served over clear ice.",
-    price: "2 200 ₸",
-  },
-] as const;
+// (Featured drinks moved to lib/menu-data.ts — single source for menu items.)
 
 export interface ReviewHighlight {
   quote: string;

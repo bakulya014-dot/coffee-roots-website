@@ -21,7 +21,10 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "COFFEE ROOTS — Specialty Coffee in Almaty (Portfolio Concept)",
+  title: {
+    default: "COFFEE ROOTS — Specialty Coffee in Almaty (Portfolio Concept)",
+    template: "%s · COFFEE ROOTS",
+  },
   description:
     "Independent portfolio redesign concept for a specialty coffee shop in Almaty, Kazakhstan. Not the official COFFEE ROOTS website.",
 };
@@ -32,7 +35,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    // data-scroll-behavior keeps Next.js suppressing smooth-scroll during
+    // route transitions (matches the CSS scroll-behavior in globals.css)
+    <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth">
       <body className={`${inter.variable} ${manrope.variable} antialiased`}>
         <ThemeProvider>
           <LoadingScreen />

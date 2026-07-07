@@ -30,14 +30,15 @@ export interface NavLink {
   href: string;
 }
 
-// Placeholder anchors until the real routes exist (SPEC.md §5).
+// Real routes as pages ship; Reservations/Contact stay home-anchor
+// placeholders until their pages exist (SPEC.md §11 step 6).
 export const NAV_LINKS: readonly NavLink[] = [
-  { label: "Home", href: "#home" },
-  { label: "Menu", href: "#menu" },
-  { label: "About", href: "#about" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Reservations", href: "#reservations" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "Menu", href: "/menu" },
+  { label: "About", href: "/about" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Reservations", href: "/#reservations" },
+  { label: "Contact", href: "/#contact" },
 ] as const;
 
 export const SCROLL = {
