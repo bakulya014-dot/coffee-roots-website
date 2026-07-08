@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# COFFEE ROOTS — Portfolio Redesign Concept
 
-## Getting Started
+A trilingual (EN / RU / KZ), fully static marketing site for a specialty
+coffee shop in Almaty, Kazakhstan — built as an independent portfolio
+redesign concept. **Not the official website of COFFEE ROOTS** (official
+Instagram: [@coffeeroots.kz](https://www.instagram.com/coffeeroots.kz)).
 
-First, run the development server:
+## Highlights
+
+- **Next.js 15** (App Router, static export), **TypeScript strict**, **Tailwind v4**, **shadcn/ui**, **Motion**
+- **Client-side i18n** — EN/RU/KZ with lazy-loaded message files, localStorage persistence, and a key-parity check script; Kazakh glyphs covered via `cyrillic-ext` subsets of Manrope/Inter
+- **Filterable menu** (26 items, 6 categories), masonry **gallery with keyboard-accessible lightbox**, **reservations + contact forms** (react-hook-form + zod, validation messages that re-translate live)
+- **AI-generated editorial photography** (Higgsfield Soul 2.0), art-directed to match the real café's visual identity — teal columns, stone bar, red saucers, mural; generation pipeline in [`scripts/fetch-and-optimize.mjs`](scripts/fetch-and-optimize.mjs)
+- **SEO**: per-route metadata, Open Graph, `CafeOrCoffeeShop` JSON-LD, sitemap, robots
+- **A11y**: skip link, focus management, aria-labelled controls, `prefers-reduced-motion` respected throughout
+
+## Development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev          # http://localhost:3000
+npm run build        # static export → out/
+node scripts/check-translations.mjs   # i18n key parity
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deployment
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Pushing to `main` triggers [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml),
+which builds the static export with the correct base path and publishes to
+**GitHub Pages** (enable Pages → Source: GitHub Actions in repo settings).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project documents
 
-## Learn More
+- [SPEC.md](SPEC.md) — the master build spec (phases, standards, constraints)
+- [CLAUDE.md](CLAUDE.md) — project conventions
+- [PHOTOGRAPHY_BRIEF.md](PHOTOGRAPHY_BRIEF.md) / [IMAGE_PROMPTS.md](IMAGE_PROMPTS.md) — art direction and the prompt package behind the image set
 
-To learn more about Next.js, take a look at the following resources:
+## Legal
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+All photography is AI-generated concept imagery — nothing is reproduced from
+the real business or its social media. Reviews and story copy are fictional.
+The footer carries the mandatory disclaimer on every page.
