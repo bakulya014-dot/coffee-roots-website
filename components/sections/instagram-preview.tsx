@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 import { Button } from "@/components/ui/button";
 import { InstagramIcon } from "@/components/ui/instagram-icon";
 import { Reveal } from "@/components/ui/reveal";
@@ -18,20 +20,38 @@ export function InstagramPreview() {
             {t("home.instagramTitle")}
           </h2>
           <p className="mt-2 text-muted-foreground">
-            {/* Tiles are decorative placeholders — no photos are reproduced
-                from the real profile without permission (SPEC.md §0). */}
-            {t("home.instagramSubtitle")}
+            {/* Concept preview tiles — original AI photography in the real
+                feed's spirit; nothing reproduced from the profile (SPEC §0). */}
+            {t("home.instagramSubtitle")}{" "}
+            <a
+              href={SITE.instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-caramel underline-offset-4 hover:underline"
+            >
+              {SITE.instagramHandle}
+            </a>
           </p>
         </Reveal>
         <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3">
           {INSTAGRAM_TILES.map((tile, i) => (
             <Reveal key={tile.id} delay={i * 0.08}>
-              <div
-                aria-hidden="true"
-                className={`flex aspect-square items-center justify-center rounded-xl bg-gradient-to-br ${tile.gradient} transition-transform hover:scale-[1.02] dark:from-secondary dark:to-charcoal`}
+              <a
+                href={SITE.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${t(`home.tiles.${tile.id}`)} — Instagram`}
+                className="group block overflow-hidden rounded-xl focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none"
               >
-                <tile.icon className="h-8 w-8 text-caramel/60" />
-              </div>
+                <Image
+                  src={tile.src}
+                  alt={t(`home.tiles.${tile.id}`)}
+                  width={1200}
+                  height={1200}
+                  sizes="(min-width: 640px) 33vw, 50vw"
+                  className="aspect-square w-full object-cover transition-transform duration-300 motion-safe:group-hover:scale-105"
+                />
+              </a>
             </Reveal>
           ))}
         </div>

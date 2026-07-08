@@ -11,6 +11,7 @@ export const SITE = {
   addressLatin: "Bogenbai Batyr Street, Almaty, Kazakhstan",
   /** Official Instagram profile. */
   instagramUrl: "https://www.instagram.com/coffeeroots.kz",
+  instagramHandle: "@coffeeroots.kz",
   // PLACEHOLDER — no publicly verified business email exists yet. Replace
   // with the official address if one becomes available.
   email: "hello@coffeeroots.kz",

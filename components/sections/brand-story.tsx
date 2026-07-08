@@ -1,6 +1,6 @@
 "use client";
 
-import { Coffee } from "lucide-react";
+import Image from "next/image";
 
 import { Reveal } from "@/components/ui/reveal";
 import { useLanguage } from "@/hooks/useLanguage";
@@ -20,13 +20,14 @@ export function BrandStory() {
           <p className="mt-3 text-muted-foreground">{t("home.storyP2")}</p>
         </Reveal>
         <Reveal delay={0.15}>
-          {/* Interior photo placeholder — replaced in the imagery pass (§10) */}
-          <div
-            aria-hidden="true"
-            className="flex aspect-[4/3] items-center justify-center rounded-2xl bg-gradient-to-br from-cream to-caramel/20 dark:from-secondary dark:to-caramel/10"
-          >
-            <Coffee className="h-12 w-12 text-caramel/60" />
-          </div>
+          <Image
+            src="/images/interior-seating.jpg"
+            alt={t("home.storyImageAlt")}
+            width={1800}
+            height={1350}
+            sizes="(min-width: 768px) 50vw, 100vw"
+            className="aspect-[4/3] w-full rounded-2xl object-cover"
+          />
         </Reveal>
       </div>
     </section>

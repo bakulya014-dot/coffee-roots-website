@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Star } from "lucide-react";
 
@@ -16,18 +17,22 @@ export function Hero() {
       id="home"
       className="relative flex min-h-svh flex-col items-center justify-center overflow-hidden px-4 text-center"
     >
-      {/* Decorative warm wash until the hero photo exists (SPEC.md §10) */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-gradient-to-b from-warm-beige via-cream to-cream dark:from-secondary dark:via-charcoal dark:to-charcoal"
-      />
-      <div
-        aria-hidden="true"
-        className="absolute -top-24 right-[-10%] -z-10 h-96 w-96 rounded-full bg-caramel/15 blur-3xl"
-      />
+      {/* Interior photograph with a legibility scrim over it — text stays
+          readable in both themes without hiding the room. */}
+      <div aria-hidden="true" className="absolute inset-0 -z-10">
+        <Image
+          src="/images/hero-interior.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-cream/85 via-cream/60 to-cream/85 dark:from-charcoal/85 dark:via-charcoal/65 dark:to-charcoal/85" />
+      </div>
 
       <Reveal immediate>
-        <p className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-border bg-cream/60 px-3 py-1 text-sm text-muted-foreground backdrop-blur-sm dark:bg-charcoal/60">
+        <p className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-border bg-cream/70 px-3 py-1 text-sm text-muted-foreground backdrop-blur-sm dark:bg-charcoal/70">
           <Star aria-hidden="true" className="h-3.5 w-3.5 fill-caramel text-caramel" />
           {RATING.score} · {RATING.count} {t("hero.reviews")} ·{" "}
           {t("hero.tagline")}

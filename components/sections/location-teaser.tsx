@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Clock, MapPin } from "lucide-react";
 
@@ -44,13 +45,14 @@ export function LocationTeaser() {
           </p>
         </Reveal>
         <Reveal delay={0.15}>
-          {/* Google Maps placeholder — real embed ships with the Contact page */}
-          <div
-            aria-hidden="true"
-            className="flex aspect-video items-center justify-center rounded-2xl border border-border bg-gradient-to-br from-warm-beige to-cream dark:from-secondary dark:to-charcoal"
-          >
-            <MapPin className="h-10 w-10 text-caramel/60" />
-          </div>
+          <Image
+            src="/images/exterior.jpg"
+            alt={t("home.exteriorAlt")}
+            width={1800}
+            height={1013}
+            sizes="(min-width: 768px) 50vw, 100vw"
+            className="aspect-video w-full rounded-2xl border border-border object-cover"
+          />
         </Reveal>
       </div>
     </section>

@@ -36,8 +36,18 @@
     "storyP2": "Today the room is bigger but the idea isn't: single-origin beans on rotation, reclaimed wood, morning light, and enough quiet outlets that nobody asks you to leave.",
     "reviewsTitle": "What guests say",
     "instagramTitle": "From our Instagram",
-    "instagramSubtitle": "A preview of the feed — tap through for the real thing.",
+    "instagramSubtitle": "A concept preview in the spirit of the real feed — find us at",
     "followCta": "Follow us on Instagram",
+    "storyImageAlt": "Inside Coffee Roots — bentwood chairs, pedestal tables, teal columns and the mural in soft daylight",
+    "exteriorAlt": "The curved glass corner of the coffee shop at dusk, yellow bistro chairs on the terrace",
+    "tiles": {
+      "latte": "Flat white with heart latte art on a red saucer",
+      "pastry": "Pastry case with croissants, berry danishes and cherry pie",
+      "work": "Quiet work corner with a laptop and espresso",
+      "plants": "Plants and handmade ceramics on teal shelves",
+      "dessert": "Slice of tiramisu on a cream plate",
+      "beans": "Freshly roasted beans spilling from a kraft bag"
+    },
     "findUsTitle": "Find us",
     "contactNote": "Directions, the map, and the contact form live on the Contact page."
   },
@@ -129,22 +139,22 @@
   },
   "gallery": {
     "title": "Gallery",
-    "intro": "Placeholder artwork for now — the real photo set replaces these tiles without touching the layout. Click any tile to view it large.",
+    "intro": "The room, the bar, and the coffee — original photography for this concept. Click any tile to view it large.",
     "openImage": "Open image: {alt}",
     "close": "Close image",
     "previous": "Previous image",
     "next": "Next image",
     "dialogLabel": "Image {current} of {total}: {alt}",
     "images": {
-      "g1": { "alt": "Placeholder artwork — morning light study in cream and caramel" },
-      "g2": { "alt": "Placeholder artwork — beans and warm tones" },
-      "g3": { "alt": "Placeholder artwork — pour-over abstraction" },
-      "g4": { "alt": "Placeholder artwork — pastry case shapes" },
-      "g5": { "alt": "Placeholder artwork — hands and cup composition" },
-      "g6": { "alt": "Placeholder artwork — laptop corner geometry" },
-      "g7": { "alt": "Placeholder artwork — plants by the window" },
-      "g8": { "alt": "Placeholder artwork — wood grain textures" },
-      "g9": { "alt": "Placeholder artwork — espresso still life" }
+      "g1": { "alt": "Morning light falling across a bare wall and an empty cup" },
+      "g2": { "alt": "Freshly roasted coffee beans filling the frame" },
+      "g3": { "alt": "Pour-over mid-bloom, steam glowing against the window" },
+      "g4": { "alt": "Pastry case with berry tarts, croissants and cinnamon rolls" },
+      "g5": { "alt": "Hands cradling a cup with heart latte art on a red saucer" },
+      "g6": { "alt": "Work corner — bentwood chair, pedestal table and teal column" },
+      "g7": { "alt": "Trailing plants by the window with the mural behind" },
+      "g8": { "alt": "Shelves of handmade ceramic cups and saucers" },
+      "g9": { "alt": "Espresso in a white cup on a deep-red saucer" }
     }
   },
   "footer": {
