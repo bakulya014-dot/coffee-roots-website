@@ -16,7 +16,7 @@ export const LOCAL_BUSINESS_JSONLD = {
   disambiguatingDescription:
     "Independent portfolio redesign concept — not the official website.",
   url: SITE_URL,
-  image: `${SITE_URL}${BASE_PATH}/images/hero-interior.jpg`,
+  image: `${SITE_URL}${BASE_PATH}/images/cafe-mural.jpg`,
   servesCuisine: ["Coffee", "Pastries", "Breakfast", "Lunch"],
   priceRange: "₸₸",
   address: {

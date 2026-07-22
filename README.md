@@ -10,7 +10,7 @@ Instagram: [@coffeeroots.kz](https://www.instagram.com/coffeeroots.kz)).
 - **Next.js 15** (App Router, static export), **TypeScript strict**, **Tailwind v4**, **shadcn/ui**, **Motion**
 - **Client-side i18n** — EN/RU/KZ with lazy-loaded message files, localStorage persistence, and a key-parity check script; Kazakh glyphs covered via `cyrillic-ext` subsets of Manrope/Inter
 - **Filterable menu** (26 items, 6 categories), masonry **gallery with keyboard-accessible lightbox**, **reservations + contact forms** (react-hook-form + zod, validation messages that re-translate live)
-- **AI-generated editorial photography** (Higgsfield Soul 2.0), art-directed to match the real café's visual identity — teal columns, stone bar, red saucers, mural; generation pipeline in [`scripts/fetch-and-optimize.mjs`](scripts/fetch-and-optimize.mjs)
+- **Official photography supplied by the café owners**, cropped and optimized for the web by [`scripts/process-owner-photos.mjs`](scripts/process-owner-photos.mjs) (EXIF, including GPS, is stripped on export)
 - **SEO**: per-route metadata, Open Graph, `CafeOrCoffeeShop` JSON-LD, sitemap, robots
 - **A11y**: skip link, focus management, aria-labelled controls, `prefers-reduced-motion` respected throughout
 
@@ -37,6 +37,10 @@ which builds the static export with the correct base path and publishes to
 
 ## Legal
 
-All photography is AI-generated concept imagery — nothing is reproduced from
-the real business or its social media. Reviews and story copy are fictional.
-The footer carries the mandatory disclaimer on every page.
+Photography © COFFEE ROOTS — supplied by the café owners for use in this
+project. Original files are not committed to this repository; regenerate the
+web set with `PHOTOS_SRC=/path/to/originals node scripts/process-owner-photos.mjs`.
+
+Reviews and story copy remain illustrative placeholders pending the owners'
+own wording. The footer carries the portfolio disclaimer on every page — see
+SPEC.md §0 before removing it.

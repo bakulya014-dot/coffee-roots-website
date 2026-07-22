@@ -21,10 +21,10 @@ export function BrandStory() {
         </Reveal>
         <Reveal delay={0.15}>
           <Image
-            src="/images/interior-seating.jpg"
+            src="/images/cafe-vinyl.jpg"
             alt={t("home.storyImageAlt")}
-            width={1800}
-            height={1350}
+            width={1600}
+            height={1200}
             sizes="(min-width: 768px) 50vw, 100vw"
             className="aspect-[4/3] w-full rounded-2xl object-cover"
           />

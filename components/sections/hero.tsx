@@ -21,7 +21,7 @@ export function Hero() {
           readable in both themes without hiding the room. */}
       <div aria-hidden="true" className="absolute inset-0 -z-10">
         <Image
-          src="/images/hero-interior.jpg"
+          src="/images/cafe-mural.jpg"
           alt=""
           fill
           priority

@@ -36,17 +36,17 @@
     "storyP2": "Today the room is bigger but the idea isn't: single-origin beans on rotation, reclaimed wood, morning light, and enough quiet outlets that nobody asks you to leave.",
     "reviewsTitle": "What guests say",
     "instagramTitle": "From our Instagram",
-    "instagramSubtitle": "A concept preview in the spirit of the real feed — find us at",
+    "instagramSubtitle": "Straight from the bar — follow along at",
     "followCta": "Follow us on Instagram",
-    "storyImageAlt": "Inside Coffee Roots — bentwood chairs, pedestal tables, teal columns and the mural in soft daylight",
-    "exteriorAlt": "The curved glass corner of the coffee shop at dusk, yellow bistro chairs on the terrace",
+    "storyImageAlt": "The record collection and speaker beside the mural at Coffee Roots",
+    "locationAlt": "Iced drinks on the steel bar at Coffee Roots",
     "tiles": {
-      "latte": "Flat white with heart latte art on a red saucer",
-      "pastry": "Pastry case with croissants, berry danishes and cherry pie",
-      "work": "Quiet work corner with a laptop and espresso",
-      "plants": "Plants and handmade ceramics on teal shelves",
-      "dessert": "Slice of tiramisu on a cream plate",
-      "beans": "Freshly roasted beans spilling from a kraft bag"
+      "matcha": "Iced matcha tonic in a glass on the bar",
+      "pastry": "Tray of freshly baked pastries with serving tongs",
+      "mural": "The hand-painted mural behind the coffee bar",
+      "coldbrew": "Cold brew over ice in a tumbler",
+      "vinyl": "Record collection and speaker in the café",
+      "record": "Illustrated turntable slipmat on the deck"
     },
     "findUsTitle": "Find us",
     "contactNote": "Directions, the map, and the contact form live on the Contact page."
@@ -139,22 +139,18 @@
   },
   "gallery": {
     "title": "Gallery",
-    "intro": "The room, the bar, and the coffee — original photography for this concept. Click any tile to view it large.",
+    "intro": "The room, the bar, and the coffee — photographed at Coffee Roots. Click any tile to view it large.",
     "openImage": "Open image: {alt}",
     "close": "Close image",
     "previous": "Previous image",
     "next": "Next image",
     "dialogLabel": "Image {current} of {total}: {alt}",
     "images": {
-      "g1": { "alt": "Morning light falling across a bare wall and an empty cup" },
-      "g2": { "alt": "Freshly roasted coffee beans filling the frame" },
-      "g3": { "alt": "Pour-over mid-bloom, steam glowing against the window" },
-      "g4": { "alt": "Pastry case with berry tarts, croissants and cinnamon rolls" },
-      "g5": { "alt": "Hands cradling a cup with heart latte art on a red saucer" },
-      "g6": { "alt": "Work corner — bentwood chair, pedestal table and teal column" },
-      "g7": { "alt": "Trailing plants by the window with the mural behind" },
-      "g8": { "alt": "Shelves of handmade ceramic cups and saucers" },
-      "g9": { "alt": "Espresso in a white cup on a deep-red saucer" }
+      "mural": { "alt": "A barista at work in front of the hand-painted mural behind the bar" },
+      "drinks": { "alt": "Iced matcha tonic, iced latte and cold brew lined up on the steel bar" },
+      "pastry": { "alt": "Tray of freshly baked pastries and a cherry pie in the display case" },
+      "vinyl": { "alt": "The café's record collection and speaker against the mural wall" },
+      "record": { "alt": "Illustrated turntable slipmat on the record deck" }
     }
   },
   "footer": {

@@ -7,12 +7,13 @@ export interface InstagramTile {
   src: string;
 }
 
-// AI-generated editorial photos matching the real feed's subjects.
+// Official COFFEE ROOTS photography supplied by the café owners, cropped to
+// square by scripts/process-owner-photos.mjs.
 export const INSTAGRAM_TILES: readonly InstagramTile[] = [
-  { id: "latte", src: "/images/tile-latte.jpg" },
+  { id: "matcha", src: "/images/tile-matcha.jpg" },
   { id: "pastry", src: "/images/tile-pastry.jpg" },
-  { id: "work", src: "/images/tile-work.jpg" },
-  { id: "plants", src: "/images/tile-plants.jpg" },
-  { id: "dessert", src: "/images/tile-dessert.jpg" },
-  { id: "beans", src: "/images/tile-beans.jpg" },
+  { id: "mural", src: "/images/tile-mural.jpg" },
+  { id: "coldbrew", src: "/images/tile-coldbrew.jpg" },
+  { id: "vinyl", src: "/images/tile-vinyl.jpg" },
+  { id: "record", src: "/images/tile-record.jpg" },
 ] as const;

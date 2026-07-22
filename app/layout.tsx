@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     title: "COFFEE ROOTS — Specialty Coffee in Almaty",
     description:
       "Specialty coffee, morning light, and a quiet corner to work — an independent portfolio redesign concept.",
-    images: [{ url: "/images/hero-interior.jpg", width: 2048, height: 1152 }],
+    images: [{ url: "/images/cafe-mural.jpg", width: 1500, height: 1875 }],
   },
   twitter: {
     card: "summary_large_image",

@@ -6,6 +6,7 @@
 
 - This is an independent portfolio redesign concept, not the official Coffee Roots website.
 - No copyrighted or scraped photos of the real business — placeholder / AI-generated generic coffee-shop photography only.
+  - **Amended 2026-07-21:** the café owners supplied their own official photographs for use in this project, so the site now ships genuine COFFEE ROOTS imagery instead. This covers photography only; the disclaimer below still stands until the owners formally adopt the site.
 - Footer must include, verbatim: "This website is an independent portfolio redesign concept created for demonstration purposes. It is not the official website of COFFEE ROOTS."
 
 ## 1. Business Reference Data

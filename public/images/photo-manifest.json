@@ -1,0 +1,72 @@
+{
+  "cafe-mural": {
+    "width": 1500,
+    "height": 1875,
+    "source": "IMG_0809.jpg"
+  },
+  "cafe-vinyl": {
+    "width": 1600,
+    "height": 1200,
+    "source": "IMG_0795.jpg"
+  },
+  "cafe-bar": {
+    "width": 1600,
+    "height": 900,
+    "source": "IMG_0819.jpg"
+  },
+  "tile-matcha": {
+    "width": 1000,
+    "height": 1000,
+    "source": "IMG_0819.jpg"
+  },
+  "tile-coldbrew": {
+    "width": 1000,
+    "height": 1000,
+    "source": "IMG_0819.jpg"
+  },
+  "tile-pastry": {
+    "width": 1000,
+    "height": 1000,
+    "source": "IMG_0815.jpg"
+  },
+  "tile-record": {
+    "width": 1000,
+    "height": 1000,
+    "source": "IMG_0800.jpg"
+  },
+  "tile-mural": {
+    "width": 1000,
+    "height": 1000,
+    "source": "IMG_0809.jpg"
+  },
+  "tile-vinyl": {
+    "width": 1000,
+    "height": 1000,
+    "source": "IMG_0795.jpg"
+  },
+  "gallery-mural": {
+    "width": 1200,
+    "height": 1810,
+    "source": "IMG_0809.jpg"
+  },
+  "gallery-drinks": {
+    "width": 1200,
+    "height": 1559,
+    "source": "IMG_0819.jpg"
+  },
+  "gallery-pastry": {
+    "width": 1300,
+    "height": 1398,
+    "source": "IMG_0815.jpg"
+  },
+  "gallery-vinyl": {
+    "width": 1200,
+    "height": 1600,
+    "source": "IMG_0795.jpg"
+  },
+  "gallery-record": {
+    "width": 1200,
+    "height": 1600,
+    "source": "IMG_0800.jpg"
+  }
+}

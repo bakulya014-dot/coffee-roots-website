@@ -46,10 +46,10 @@ export function LocationTeaser() {
         </Reveal>
         <Reveal delay={0.15}>
           <Image
-            src="/images/exterior.jpg"
-            alt={t("home.exteriorAlt")}
-            width={1800}
-            height={1013}
+            src="/images/cafe-bar.jpg"
+            alt={t("home.locationAlt")}
+            width={1600}
+            height={900}
             sizes="(min-width: 768px) 50vw, 100vw"
             className="aspect-video w-full rounded-2xl border border-border object-cover"
           />
