@@ -19,6 +19,7 @@ import { FormField, fieldProps } from "@/components/ui/form-field";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useLanguage } from "@/hooks/useLanguage";
+import { isDemoMode, sendEmail } from "@/lib/booking";
 
 // Validation messages are i18n KEYS, translated at render time (see
 // reservation-form.tsx for the rationale).
@@ -40,9 +41,12 @@ export function ContactForm() {
     formState: { errors, isSubmitting },
   } = useForm<FormValues>({ resolver: zodResolver(schema) });
 
-  const onSubmit = async () => {
-    // Mock submission — no real backend (SPEC.md §0 demo constraints).
-    await new Promise((r) => setTimeout(r, 900));
+  const onSubmit = async (values: FormValues) => {
+    await sendEmail({
+      subject: `Website message — ${values.name}`,
+      message: values.message,
+      replyTo: values.email,
+    });
     setSent(true);
     reset();
   };
@@ -101,9 +105,11 @@ export function ContactForm() {
           <p aria-live="polite" className="sr-only">
             {isSubmitting ? t("forms.submitting") : ""}
           </p>
-          <p className="mt-3 text-xs text-muted-foreground">
-            {t("forms.demoNote")}
-          </p>
+          {isDemoMode && (
+            <p className="mt-3 text-xs text-muted-foreground">
+              {t("forms.demoNote")}
+            </p>
+          )}
         </div>
       </form>
 
@@ -111,7 +117,9 @@ export function ContactForm() {
         <DialogContent>
           <DialogHeader>
             <DialogTitle>{t("contact.successTitle")}</DialogTitle>
-            <DialogDescription>{t("contact.successBody")}</DialogDescription>
+            <DialogDescription>
+              {isDemoMode ? t("contact.successDemo") : t("contact.successBody")}
+            </DialogDescription>
           </DialogHeader>
           <DialogFooter>
             <Button onClick={() => setSent(false)}>

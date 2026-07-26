@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { ReservationForm } from "@/components/sections/reservation-form";
+import { PageBanner } from "@/components/ui/page-banner";
 import { PageIntro } from "@/components/ui/page-intro";
 
 // Metadata stays English for now — localized metadata arrives with
@@ -15,6 +16,16 @@ export default function ReservationsPage() {
   return (
     <main className="mx-auto max-w-3xl px-4 pt-28 pb-20 sm:px-6">
       <PageIntro titleKey="reservations.title" introKey="reservations.intro" />
+      <div className="mt-8">
+        <PageBanner
+          src="/images/reservations-banner.jpg"
+          altKey="reservations.bannerAlt"
+          width={1600}
+          height={899}
+          aspect="aspect-[16/9]"
+          priority
+        />
+      </div>
       <div className="mt-10">
         <ReservationForm />
       </div>

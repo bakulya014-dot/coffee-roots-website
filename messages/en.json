@@ -91,7 +91,9 @@
     "sourcing2": "Espresso stays consistent; filter is where we experiment. If something unusual lands — a honey-processed lot, an experimental fermentation — it shows up on the V60 bar first.",
     "roomTitle": "The room",
     "room1": "Natural light over fixtures, reclaimed wood over laminate, and acoustics tuned so a full room still sounds like a murmur. The window bench catches sun until mid-afternoon; the back corners stay quiet, with outlets at every seat.",
-    "room2": "It's deliberately a room for remote workers as much as for dates and long conversations — stay as long as the coffee keeps coming."
+    "room2": "It's deliberately a room for remote workers as much as for dates and long conversations — stay as long as the coffee keeps coming.",
+    "muralAlt": "A barista at work in front of the hand-painted mural",
+    "pastryAlt": "Freshly baked pastries on the tray in the display case"
   },
   "menu": {
     "title": "Menu",
@@ -109,33 +111,112 @@
       "Lunch": "Lunch"
     },
     "items": {
-      "espresso": { "name": "Espresso", "description": "Single-origin shot from this month's rotation." },
-      "latte": { "name": "Latte", "description": "Silky microfoam rosetta on hand-thrown ceramic." },
-      "raf": { "name": "Raf", "description": "Almaty's favourite — vanilla cream, gently steamed." },
-      "coldBrew": { "name": "Cold brew", "description": "Steeped 18 hours, served over clear ice." },
-      "flatWhite": { "name": "Flat white", "description": "Double ristretto under a thin veil of milk." },
-      "filterV60": { "name": "Filter V60", "description": "Hand-poured, bright and tea-like. Ask what's on the bar." },
-      "blackTea": { "name": "Taiga black tea", "description": "Full-bodied loose leaf with wild thyme." },
-      "sencha": { "name": "Sencha", "description": "Steamed green tea, grassy and clean." },
-      "seaBuckthorn": { "name": "Sea buckthorn tea", "description": "House favourite — tart, golden, served hot." },
-      "herbal": { "name": "Herbal infusion", "description": "Chamomile, mint, and lemon balm. Naturally caffeine-free." },
-      "croissant": { "name": "Butter croissant", "description": "Laminated over three days, baked every morning." },
-      "almondCroissant": { "name": "Almond croissant", "description": "Twice-baked with frangipane and toasted flakes." },
-      "cardamomBun": { "name": "Cardamom bun", "description": "Scandinavian-style knot, warm spice, light glaze." },
-      "bananaBread": { "name": "Banana bread", "description": "Dense, dark, and toasted to order with butter." },
-      "tiramisu": { "name": "Tiramisu", "description": "Classic recipe with our own espresso soak." },
-      "basqueCheesecake": { "name": "Basque cheesecake", "description": "Burnt top, molten centre, no crust." },
-      "medovik": { "name": "Medovik", "description": "Honey layer cake, the way grandmothers make it." },
-      "chocolateTart": { "name": "Dark chocolate tart", "description": "70% chocolate, sea salt, espresso pastry shell." },
-      "avocadoToast": { "name": "Avocado toast", "description": "Sourdough, poached egg, chili oil, pickled onion." },
-      "syrniki": { "name": "Syrniki", "description": "Cottage-cheese pancakes, sour cream, berry compote." },
-      "granola": { "name": "Granola bowl", "description": "House granola, yogurt, seasonal fruit, mountain honey." },
-      "omelette": { "name": "Omelette", "description": "Three eggs, aged cheese, herbs, toasted sourdough." },
-      "pestoSandwich": { "name": "Chicken pesto sandwich", "description": "Grilled ciabatta, basil pesto, roasted peppers." },
-      "grainBowl": { "name": "Grain bowl", "description": "Bulgur, roasted vegetables, tahini, soft egg." },
-      "soup": { "name": "Soup of the day", "description": "Made each morning — ask the bar what's simmering." },
-      "caesar": { "name": "Caesar salad", "description": "Romaine, parmesan, sourdough croutons, soft egg." }
-    }
+      "espresso": {
+        "name": "Espresso",
+        "description": "Single-origin shot from this month's rotation."
+      },
+      "latte": {
+        "name": "Latte",
+        "description": "Silky microfoam rosetta on hand-thrown ceramic."
+      },
+      "raf": {
+        "name": "Raf",
+        "description": "Almaty's favourite — vanilla cream, gently steamed."
+      },
+      "coldBrew": {
+        "name": "Cold brew",
+        "description": "Steeped 18 hours, served over clear ice."
+      },
+      "flatWhite": {
+        "name": "Flat white",
+        "description": "Double ristretto under a thin veil of milk."
+      },
+      "filterV60": {
+        "name": "Filter V60",
+        "description": "Hand-poured, bright and tea-like. Ask what's on the bar."
+      },
+      "blackTea": {
+        "name": "Taiga black tea",
+        "description": "Full-bodied loose leaf with wild thyme."
+      },
+      "sencha": {
+        "name": "Sencha",
+        "description": "Steamed green tea, grassy and clean."
+      },
+      "seaBuckthorn": {
+        "name": "Sea buckthorn tea",
+        "description": "House favourite — tart, golden, served hot."
+      },
+      "herbal": {
+        "name": "Herbal infusion",
+        "description": "Chamomile, mint, and lemon balm. Naturally caffeine-free."
+      },
+      "croissant": {
+        "name": "Butter croissant",
+        "description": "Laminated over three days, baked every morning."
+      },
+      "almondCroissant": {
+        "name": "Almond croissant",
+        "description": "Twice-baked with frangipane and toasted flakes."
+      },
+      "cardamomBun": {
+        "name": "Cardamom bun",
+        "description": "Scandinavian-style knot, warm spice, light glaze."
+      },
+      "bananaBread": {
+        "name": "Banana bread",
+        "description": "Dense, dark, and toasted to order with butter."
+      },
+      "tiramisu": {
+        "name": "Tiramisu",
+        "description": "Classic recipe with our own espresso soak."
+      },
+      "basqueCheesecake": {
+        "name": "Basque cheesecake",
+        "description": "Burnt top, molten centre, no crust."
+      },
+      "medovik": {
+        "name": "Medovik",
+        "description": "Honey layer cake, the way grandmothers make it."
+      },
+      "chocolateTart": {
+        "name": "Dark chocolate tart",
+        "description": "70% chocolate, sea salt, espresso pastry shell."
+      },
+      "avocadoToast": {
+        "name": "Avocado toast",
+        "description": "Sourdough, poached egg, chili oil, pickled onion."
+      },
+      "syrniki": {
+        "name": "Syrniki",
+        "description": "Cottage-cheese pancakes, sour cream, berry compote."
+      },
+      "granola": {
+        "name": "Granola bowl",
+        "description": "House granola, yogurt, seasonal fruit, mountain honey."
+      },
+      "omelette": {
+        "name": "Omelette",
+        "description": "Three eggs, aged cheese, herbs, toasted sourdough."
+      },
+      "pestoSandwich": {
+        "name": "Chicken pesto sandwich",
+        "description": "Grilled ciabatta, basil pesto, roasted peppers."
+      },
+      "grainBowl": {
+        "name": "Grain bowl",
+        "description": "Bulgur, roasted vegetables, tahini, soft egg."
+      },
+      "soup": {
+        "name": "Soup of the day",
+        "description": "Made each morning — ask the bar what's simmering."
+      },
+      "caesar": {
+        "name": "Caesar salad",
+        "description": "Romaine, parmesan, sourdough croutons, soft egg."
+      }
+    },
+    "bannerAlt": "Iced matcha tonic and cold brew on the bar at Coffee Roots"
   },
   "gallery": {
     "title": "Gallery",
@@ -146,11 +227,21 @@
     "next": "Next image",
     "dialogLabel": "Image {current} of {total}: {alt}",
     "images": {
-      "mural": { "alt": "A barista at work in front of the hand-painted mural behind the bar" },
-      "drinks": { "alt": "Iced matcha tonic, iced latte and cold brew lined up on the steel bar" },
-      "pastry": { "alt": "Tray of freshly baked pastries and a cherry pie in the display case" },
-      "vinyl": { "alt": "The café's record collection and speaker against the mural wall" },
-      "record": { "alt": "Illustrated turntable slipmat on the record deck" }
+      "mural": {
+        "alt": "A barista at work in front of the hand-painted mural behind the bar"
+      },
+      "drinks": {
+        "alt": "Iced matcha tonic, iced latte and cold brew lined up on the steel bar"
+      },
+      "pastry": {
+        "alt": "Tray of freshly baked pastries and a cherry pie in the display case"
+      },
+      "vinyl": {
+        "alt": "The café's record collection and speaker against the mural wall"
+      },
+      "record": {
+        "alt": "Illustrated turntable slipmat on the record deck"
+      }
     }
   },
   "footer": {
@@ -191,8 +282,14 @@
     "guestsLabel": "Guests",
     "submit": "Reserve a table",
     "successTitle": "Table reserved",
-    "successBody": "Thanks, {name} — we've noted a table for {guests} on {date} at {time}. This is a demo: no real reservation was made.",
-    "successClose": "Done"
+    "successBody": "Thanks, {name} — a table for {guests} on {date} at {time}.",
+    "successClose": "Done",
+    "bannerAlt": "The record collection and speaker in the café",
+    "messageHeading": "New table reservation from the website",
+    "deliveredEmail": "Your request has been sent to the café. They will confirm using the contact details you gave.",
+    "confirmViaWhatsapp": "One more step: tap below to send your booking to the café on WhatsApp.",
+    "notDelivered": "Note: online booking is not switched on yet, so nothing was sent. Please call or message the café to confirm.",
+    "whatsappCta": "Send on WhatsApp"
   },
   "contact": {
     "title": "Contact",
@@ -205,11 +302,13 @@
     "messagePlaceholder": "What's on your mind?",
     "submit": "Send message",
     "successTitle": "Message sent",
-    "successBody": "Thanks — this is a demo, so nothing was actually delivered. On the live site your message would reach the team.",
+    "successBody": "Thanks for writing — we'll reply to the address you gave.",
     "successClose": "Close",
     "addressTitle": "Address",
     "openInMaps": "Open in Google Maps",
     "hoursTitle": "Opening hours",
-    "mapTitle": "Map showing COFFEE ROOTS on Bogenbai Batyr Street, Almaty"
+    "mapTitle": "Map showing COFFEE ROOTS on Bogenbai Batyr Street, Almaty",
+    "bannerAlt": "Behind the bar at Coffee Roots",
+    "successDemo": "Note: the message form is not switched on yet, so nothing was sent. Please reach the café by Instagram or phone."
   }
 }

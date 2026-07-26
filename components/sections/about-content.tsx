@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Handshake, Lamp, Sprout } from "lucide-react";
 
 import {
@@ -33,6 +34,16 @@ export function AboutContent() {
             <p>{t("about.story1")}</p>
             <p>{t("about.story2")}</p>
           </div>
+        </Reveal>
+        <Reveal delay={0.1}>
+          <Image
+            src="/images/about-mural.jpg"
+            alt={t("about.muralAlt")}
+            width={1600}
+            height={1202}
+            sizes="(min-width: 1152px) 1100px, 100vw"
+            className="mt-10 aspect-[16/9] w-full rounded-2xl object-cover"
+          />
         </Reveal>
       </section>
 
@@ -101,6 +112,16 @@ export function AboutContent() {
             </div>
           </Reveal>
         </div>
+        <Reveal delay={0.1}>
+          <Image
+            src="/images/about-pastry.jpg"
+            alt={t("about.pastryAlt")}
+            width={1600}
+            height={1201}
+            sizes="(min-width: 1152px) 1100px, 100vw"
+            className="mt-12 aspect-[16/9] w-full rounded-2xl object-cover"
+          />
+        </Reveal>
       </section>
     </main>
   );

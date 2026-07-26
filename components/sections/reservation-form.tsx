@@ -18,6 +18,13 @@ import {
 import { FormField, fieldProps } from "@/components/ui/form-field";
 import { Input } from "@/components/ui/input";
 import { useLanguage } from "@/hooks/useLanguage";
+import {
+  formatReservation,
+  isDemoMode,
+  sendEmail,
+  whatsappEnabled,
+  whatsappUrl,
+} from "@/lib/booking";
 
 const EMAIL_RE = /^\S+@\S+\.\S+$/;
 const PHONE_RE = /^\+?[0-9\s().-]{6,}$/;
@@ -57,6 +64,8 @@ const SELECT_CLASS =
 export function ReservationForm() {
   const { t } = useLanguage();
   const [confirmed, setConfirmed] = useState<FormValues | null>(null);
+  /** Whether the café's inbox actually received this booking. */
+  const [emailDelivered, setEmailDelivered] = useState(false);
   const {
     register,
     handleSubmit,
@@ -64,9 +73,24 @@ export function ReservationForm() {
     formState: { errors, isSubmitting },
   } = useForm<FormValues>({ resolver: zodResolver(schema) });
 
+  /** Booking summary written in the language the guest is using. */
+  const summary = (values: FormValues) =>
+    formatReservation(values, {
+      heading: t("reservations.messageHeading"),
+      name: t("reservations.nameLabel"),
+      contact: t("reservations.contactLabel"),
+      date: t("reservations.dateLabel"),
+      time: t("reservations.timeLabel"),
+      guests: t("reservations.guestsLabel"),
+    });
+
   const onSubmit = async (values: FormValues) => {
-    // Mock submission per SPEC.md §5 — no real backend.
-    await new Promise((r) => setTimeout(r, 900));
+    const delivered = await sendEmail({
+      subject: `Reservation — ${values.name}, ${values.date} ${values.time}`,
+      message: summary(values),
+      replyTo: values.contact.includes("@") ? values.contact : undefined,
+    });
+    setEmailDelivered(delivered);
     setConfirmed(values);
     reset();
   };
@@ -170,9 +194,11 @@ export function ReservationForm() {
           <p aria-live="polite" className="sr-only">
             {isSubmitting ? t("forms.submitting") : ""}
           </p>
-          <p className="mt-3 text-xs text-muted-foreground">
-            {t("forms.demoNote")}
-          </p>
+          {isDemoMode && (
+            <p className="mt-3 text-xs text-muted-foreground">
+              {t("forms.demoNote")}
+            </p>
+          )}
         </div>
       </form>
 
@@ -193,8 +219,32 @@ export function ReservationForm() {
                 })}
             </DialogDescription>
           </DialogHeader>
+
+          {/* Say plainly what actually happened to the booking. */}
+          <p className="text-sm text-muted-foreground">
+            {emailDelivered
+              ? t("reservations.deliveredEmail")
+              : whatsappEnabled
+                ? t("reservations.confirmViaWhatsapp")
+                : t("reservations.notDelivered")}
+          </p>
+
           <DialogFooter>
-            <Button onClick={() => setConfirmed(null)}>
+            {whatsappEnabled && confirmed && (
+              <Button asChild>
+                <a
+                  href={whatsappUrl(summary(confirmed))}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t("reservations.whatsappCta")}
+                </a>
+              </Button>
+            )}
+            <Button
+              variant={whatsappEnabled ? "outline" : "default"}
+              onClick={() => setConfirmed(null)}
+            >
               {t("reservations.successClose")}
             </Button>
           </DialogFooter>

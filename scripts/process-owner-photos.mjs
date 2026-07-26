@@ -47,6 +47,15 @@ const PLAN = [
   { file: "tile-mural", src: P.mural, crop: [0, 0, 2000, 2000], w: 1000, q: 78 },
   { file: "tile-vinyl", src: P.vinyl, crop: [250, 900, 2500, 2500], w: 1000, q: 78 },
 
+  // — Page banners / supporting imagery —
+  // Wide band across the drinks photo: sets the scene above the menu list.
+  { file: "menu-banner", src: P.drinks, crop: [0, 1150, 2481, 1150], w: 1800, q: 80 },
+  { file: "about-mural", src: P.mural, crop: [0, 300, 2289, 1720], w: 1600, q: 80 },
+  { file: "about-pastry", src: P.pastry, crop: [0, 500, 2624, 1970], w: 1600, q: 80 },
+  // Each page gets a distinct view so no two banners repeat the same frame.
+  { file: "reservations-banner", src: P.vinyl, crop: [0, 1000, 3024, 1700], w: 1600, q: 80 },
+  { file: "contact-banner", src: P.mural, crop: [0, 1500, 2289, 1300], w: 1600, q: 80 },
+
   // — Gallery: the five photographs at their natural proportions —
   { file: "gallery-mural", src: P.mural, w: 1200, q: 80 },
   { file: "gallery-drinks", src: P.drinks, w: 1200, q: 80 },

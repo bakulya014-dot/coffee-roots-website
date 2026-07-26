@@ -44,6 +44,31 @@
     "height": 1000,
     "source": "IMG_0795.jpg"
   },
+  "menu-banner": {
+    "width": 1800,
+    "height": 834,
+    "source": "IMG_0819.jpg"
+  },
+  "about-mural": {
+    "width": 1600,
+    "height": 1202,
+    "source": "IMG_0809.jpg"
+  },
+  "about-pastry": {
+    "width": 1600,
+    "height": 1201,
+    "source": "IMG_0815.jpg"
+  },
+  "reservations-banner": {
+    "width": 1600,
+    "height": 899,
+    "source": "IMG_0795.jpg"
+  },
+  "contact-banner": {
+    "width": 1600,
+    "height": 909,
+    "source": "IMG_0809.jpg"
+  },
   "gallery-mural": {
     "width": 1200,
     "height": 1810,
