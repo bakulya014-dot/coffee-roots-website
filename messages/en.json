@@ -105,10 +105,12 @@
     "categories": {
       "Coffee": "Coffee",
       "Tea": "Tea",
-      "Pastries": "Pastries",
-      "Desserts": "Desserts",
       "Breakfast": "Breakfast",
-      "Lunch": "Lunch"
+      "Salads": "Salads",
+      "Snacks": "Snacks",
+      "Sandwiches": "Sandwiches",
+      "Pizza": "Pizza",
+      "Pasta": "Pasta"
     },
     "items": {
       "espresso": {
@@ -151,72 +153,194 @@
         "name": "Herbal infusion",
         "description": "Chamomile, mint, and lemon balm. Naturally caffeine-free."
       },
-      "croissant": {
-        "name": "Butter croissant",
-        "description": "Laminated over three days, baked every morning."
-      },
-      "almondCroissant": {
-        "name": "Almond croissant",
-        "description": "Twice-baked with frangipane and toasted flakes."
-      },
-      "cardamomBun": {
-        "name": "Cardamom bun",
-        "description": "Scandinavian-style knot, warm spice, light glaze."
-      },
-      "bananaBread": {
-        "name": "Banana bread",
-        "description": "Dense, dark, and toasted to order with butter."
-      },
-      "tiramisu": {
-        "name": "Tiramisu",
-        "description": "Classic recipe with our own espresso soak."
-      },
-      "basqueCheesecake": {
-        "name": "Basque cheesecake",
-        "description": "Burnt top, molten centre, no crust."
-      },
-      "medovik": {
-        "name": "Medovik",
-        "description": "Honey layer cake, the way grandmothers make it."
-      },
-      "chocolateTart": {
-        "name": "Dark chocolate tart",
-        "description": "70% chocolate, sea salt, espresso pastry shell."
-      },
-      "avocadoToast": {
-        "name": "Avocado toast",
-        "description": "Sourdough, poached egg, chili oil, pickled onion."
-      },
-      "syrniki": {
-        "name": "Syrniki",
-        "description": "Cottage-cheese pancakes, sour cream, berry compote."
-      },
-      "granola": {
-        "name": "Granola bowl",
-        "description": "House granola, yogurt, seasonal fruit, mountain honey."
-      },
-      "omelette": {
-        "name": "Omelette",
-        "description": "Three eggs, aged cheese, herbs, toasted sourdough."
-      },
-      "pestoSandwich": {
-        "name": "Chicken pesto sandwich",
-        "description": "Grilled ciabatta, basil pesto, roasted peppers."
-      },
-      "grainBowl": {
-        "name": "Grain bowl",
-        "description": "Bulgur, roasted vegetables, tahini, soft egg."
-      },
-      "soup": {
-        "name": "Soup of the day",
-        "description": "Made each morning — ask the bar what's simmering."
-      },
       "caesar": {
-        "name": "Caesar salad",
-        "description": "Romaine, parmesan, sourdough croutons, soft egg."
+        "name": "Caesar",
+        "description": "Breaded sesame chicken fillet, salad leaves with quail eggs, caesar sauce, tomatoes and parmesan, served with spiced croutons"
+      },
+      "ricePorridge": {
+        "name": "Rice porridge with fresh berries",
+        "description": "On coconut milk with cherry sauce, blueberries, raspberries and granola"
+      },
+      "breakfastRoastBeef": {
+        "name": "Breakfast with roast beef",
+        "description": "Horsemeat roast beef, two-egg scramble, salad with cucumber and cherry tomatoes, fresh croissant, butter, jam and tonnato sauce"
+      },
+      "breakfastSalmon": {
+        "name": "Breakfast with salmon",
+        "description": "Lightly salted salmon, two-egg scramble, salad with cucumber and cherry tomatoes, croissant, butter, jam and yoghurt sauce"
+      },
+      "morningBun": {
+        "name": "Morning bun with ham",
+        "description": "Bun with chicken ham, two-egg scramble on truffle sauce and a light salad with cucumber and cherry tomatoes"
+      },
+      "croissantSalmon": {
+        "name": "Croissant with salmon and poached egg",
+        "description": "Fresh croissant with poached egg and salmon on guacamole, with salad leaves and caesar sauce"
+      },
+      "caesarShrimp": {
+        "name": "Caesar with shrimp",
+        "description": "Breaded shrimp, salad leaves with quail eggs, caesar sauce, tomatoes and parmesan, served with spiced croutons"
+      },
+      "falafelSalad": {
+        "name": "With falafel",
+        "description": "Breaded falafel balls, yoghurt sauce, hummus, mixed salad, cucumber, tomatoes, red onion and warm flatbread"
+      },
+      "salmonSalad": {
+        "name": "With salmon",
+        "description": "Lightly salted salmon, guacamole, cherry tomatoes, mixed salad leaves, orange oil"
+      },
+      "goatCheeseSalad": {
+        "name": "With goat cheese and tary",
+        "description": "Mixed salad leaves, goat cheese, tary, fresh vegetables, green oil and lemon juice"
+      },
+      "freshVegSalad": {
+        "name": "Fresh vegetable",
+        "description": "Mixed salad, pea pods, fresh radish, carrot, cucumber, tomatoes, sunflower seeds, unrefined oil and lemon juice"
+      },
+      "pakChoiSalad": {
+        "name": "Green with pak choi",
+        "description": "Mixed salad leaves, green peas, lightly seared pak choi, green oil"
+      },
+      "parmesanSalad": {
+        "name": "Green with parmesan",
+        "description": "Mixed salad leaves, ripe avocado, parmesan and sweet-and-sour sauce"
+      },
+      "chickenChips": {
+        "name": "Chicken chips",
+        "description": "Breaded sesame chicken, potato wedges, spicy tomato sauce"
+      },
+      "vitelloTonnato": {
+        "name": "Vitello tonnato",
+        "description": "Horsemeat roast beef, black and green olives and tuna sauce"
+      },
+      "hummusVeg": {
+        "name": "Hummus with vegetables",
+        "description": "Hummus with fresh vegetables, spiced oil and herbs"
+      },
+      "truffleFries": {
+        "name": "Fries with truffle sauce",
+        "description": "Potato wedge fries with truffle sauce"
+      },
+      "chickenKimchiSand": {
+        "name": "With chicken and kimchi",
+        "description": "Baked chicken, mixed salad leaves, kimchi, pickled cucumber, green oil"
+      },
+      "roastBeefSand": {
+        "name": "With roast beef",
+        "description": "Horsemeat roast beef, mixed salad leaves, chimichurri sauce, cheddar"
+      },
+      "salmonSand": {
+        "name": "With salmon",
+        "description": "Lightly salted salmon, rocket, yoghurt sauce, mozzarella, capers"
+      },
+      "falafelSand": {
+        "name": "With falafel",
+        "description": "Breaded falafel, hummus, mixed salad leaves, tomatoes, red onion, yoghurt sauce"
+      },
+      "pizzaMarge": {
+        "name": "Marge",
+        "description": "Mozzarella, tomato pizza sauce, fresh basil. This is the base!"
+      },
+      "pizzaOldSchool": {
+        "name": "Old School",
+        "description": "Chicken pepperoni on tomato pizza sauce with mozzarella and oregano — this is not even a classic, this is old school!"
+      },
+      "pizzaSinger": {
+        "name": "Singer",
+        "description": "The best cheese pair — cheddar and mozzarella on cheese sauce with basil"
+      },
+      "pizzaClash": {
+        "name": "Clash",
+        "description": "Sujuk, mozzarella, black olives, tomato pizza sauce"
+      },
+      "pizzaKennedy": {
+        "name": "Kennedy",
+        "description": "Chicken fillet, beef ham, fresh tomatoes, mozzarella, basil. Order a Kennedy!"
+      },
+      "pizzaForeva": {
+        "name": "Foreva",
+        "description": "Chicken pepperoni, noble Dor Blu cheese, oregano — all that bliss on cheese sauce with mozzarella"
+      },
+      "pizzaSgtPepper": {
+        "name": "Sergeant Pepper",
+        "description": "Chorizo, jalapeno, mozzarella, oregano, tomato pizza sauce"
+      },
+      "pizzaWoodstock": {
+        "name": "Woodstock",
+        "description": "Beef ham, mushrooms, mozzarella, basil and garlic aioli"
+      },
+      "pizzaSurf": {
+        "name": "Surf pizza",
+        "description": "Baked chicken, pineapple, mozzarella, pizza sauce, sesame crust"
+      },
+      "pizzaVicious": {
+        "name": "Vicious",
+        "description": "Horsemeat roast beef, garlic aioli, black and green olives, mozzarella and tuna sauce"
+      },
+      "pizzaOasis": {
+        "name": "Oasis",
+        "description": "Chicken ham, mozzarella, creamy pistachio sauce, pistachios, basil, garlic aioli"
+      },
+      "pizzaGravity": {
+        "name": "Gravity",
+        "description": "Horsemeat roast beef, chorizo, bacon, pickled red onion, oregano, mozzarella, tomato pizza sauce"
+      },
+      "pizzaRedHot": {
+        "name": "Red Hot",
+        "description": "Chicken pepperoni, chorizo, our own kimchi, mozzarella, spicy buldak sauce"
+      },
+      "pizzaMagicMushrooms": {
+        "name": "Magic Mushrooms",
+        "description": "Champignons, shiitake and wood ear mushrooms, mozzarella and basil on garlic aioli"
+      },
+      "pizzaBombora": {
+        "name": "Bombora",
+        "description": "Slow-cooked beef mince, cheddar and mozzarella, basil, garlic aioli and natural cherry sauce"
+      },
+      "pizzaCheese": {
+        "name": "Chiiiz",
+        "description": "A seriously cheesy pizza — mozzarella, parmesan, gouda, dor blu, grated kurt and basil on pizza sauce"
+      },
+      "pizzaAquarium": {
+        "name": "Aquarium",
+        "description": "Lightly salted salmon, mozzarella, sun-dried tomatoes, rocket and bechamel sauce"
+      },
+      "pizzaYoko": {
+        "name": "Yoko",
+        "description": "Our own kimchi, pickled cucumbers, enoki, tomato sauce and mozzarella"
+      },
+      "pizzaElvis": {
+        "name": "Elvis",
+        "description": "Bacon, beef ham, pickled onion and tomatoes, mozzarella, pickles, cheese sauce, basil, sesame crust"
+      },
+      "pastaBolognese": {
+        "name": "Bolognese",
+        "description": "Slow-cooked beef mince, house tagliatelle, tomato sauce, aromatic parmesan and fresh basil"
+      },
+      "pastaJamaica": {
+        "name": "Jamaica",
+        "description": "Baked chicken, house tagliatelle, cream sauce, seared mushrooms, parmesan and fried onion"
+      },
+      "pastaNemo": {
+        "name": "Nemo",
+        "description": "Lightly salted salmon, house tagliatelle, cream sauce, cherry tomatoes, parmesan and fresh rocket"
+      },
+      "pastaForest": {
+        "name": "Forest",
+        "description": "Courgette and broccoli, house tagliatelle with tomato sauce, black olives and parmesan"
       }
     },
-    "bannerAlt": "Iced matcha tonic and cold brew on the bar at Coffee Roots"
+    "pizzaNote": "Our pizza dough proves for 72 hours, which makes it especially airy and light.",
+    "sandwichNote": "Crisp, filling sandwiches on pizza dough.",
+    "breakfastNote": "Breakfast is served until 13:00.",
+    "crustSauce": "Crust dipping sauce",
+    "crustSauceList": "Garlic aioli / Yoghurt / Cheese / Spicy tomato / Sweet and sour / Caesar / Tuna / Truffle",
+    "sizeSmall": "25 cm",
+    "sizeLarge": "30 cm",
+    "tagSpicy": "Spicy",
+    "tagVeg": "Vegetarian",
+    "tagHit": "Guest favourite",
+    "drinksNote": "Coffee and tea are still being confirmed with the cafe — prices here are indicative."
   },
   "gallery": {
     "title": "Gallery",

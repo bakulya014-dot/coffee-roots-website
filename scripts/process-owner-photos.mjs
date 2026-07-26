@@ -49,7 +49,6 @@ const PLAN = [
 
   // — Page banners / supporting imagery —
   // Wide band across the drinks photo: sets the scene above the menu list.
-  { file: "menu-banner", src: P.drinks, crop: [0, 1150, 2481, 1150], w: 1800, q: 80 },
   { file: "about-mural", src: P.mural, crop: [0, 300, 2289, 1720], w: 1600, q: 80 },
   { file: "about-pastry", src: P.pastry, crop: [0, 500, 2624, 1970], w: 1600, q: 80 },
   // Each page gets a distinct view so no two banners repeat the same frame.
